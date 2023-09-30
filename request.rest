@@ -1,0 +1,72 @@
+###
+GET http://localhost:5000
+###
+GET http://localhost:5000/device
+###
+GET http://localhost:5000/device/0e490072-ed48-45d0-ab08-22ead8c98746
+
+###
+POST http://localhost:5000/device
+Content-Type: application/json
+
+{
+    "title" : "Garasi",
+    "description" : "Kamar ayah ibu",
+    "value" : "OFF",
+    "authorEmail" : "yoga.pratama.pangestu@gmail.com"
+}
+###
+PUT http://localhost:5000/device/31ce4d82-84ce-4b8f-a67a-447cff9085c0
+Content-Type: application/json
+
+{
+    "value" : "Off"
+}
+###
+DELETE http://localhost:5000/device/77868629-4a6f-4ddd-a819-9d3a4d5baace
+###
+//
+
+
+
+/// USER 
+###
+GET https://iotbackend-1-g4573555.deta.app/user
+###
+GET http://iotbackend-1-g4573555.deta.app/user/yoga.pratama.pangestu@gmail.com
+###
+POST http://localhost:5000/user/email
+Content-Type: application/json
+
+{
+    "email" : "yoga.pratama@gmail.com"
+}
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "name" : "Yoga Pratama",
+    "email" : "yoga.pratama.pangestu@gmail.com"
+}
+###
+GET http://localhost:5000/user/fa0ccbc5-4964-4754-857c-bf62a5ff5207
+###
+PUT http://localhost:5000/user/69da3517-8790-4a6e-b07b-615e9e672d4f
+Content-Type: application/json
+
+{
+    "name" : "Yoga Pratama Pangestu",
+    "email" : "yoga.pratama.pangestu@gmail.com"
+}
+###
+
+PUT https://iotbackend-1-g4573555.deta.app/user/69da3517-8790-4a6e-b07b-615e9e672d4f
+Content-Type: application/json
+
+{
+    "name" : "Yoga Pratama Pangestu",
+    "email" : "yoga.pratama.pangestu@gmail.com"
+}
+###
+DELETE http://localhost:5000/user/f9c254a0-9d09-47c5-8caf-075c5abd4641
