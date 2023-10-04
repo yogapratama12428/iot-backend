@@ -14,5 +14,5 @@ micros:
       env:
         - name: DATABASE_URL
           description: Secret message only available to this Micro
-          default: 'mysql://8apytreflacfj5tch46z:pscale_pw_cX1tgiKfsgOV29E7czykr0gU2NNNuIR9u5vUYbFRYbW@aws.connect.psdb.cloud/smarthomebusra?sslaccept=strict'
+          default: 'mysql://2o5uj28r0neomris0twg:pscale_pw_HydCjQgZ86UHhktCWyUdM5VM3XNk6xO9LZnziDSKMwc@aws.connect.psdb.cloud/smarthomebusra?sslaccept=strict'
        

@@ -10,9 +10,12 @@ POST http://localhost:5000/device
 Content-Type: application/json
 
 {
-    "title" : "Garasi",
+    "name" : "Garasi",
     "description" : "Kamar ayah ibu",
-    "value" : "OFF",
+    "value_boolean" : false,
+    "value_string" : "",
+    "value_number" : 0,
+    "category": "Switch",
     "authorEmail" : "yoga.pratama.pangestu@gmail.com"
 }
 ###
@@ -29,9 +32,11 @@ DELETE http://localhost:5000/device/77868629-4a6f-4ddd-a819-9d3a4d5baace
 
 
 
-/// USER 
-###
+
+### user cloud
 GET https://iotbackend-1-g4573555.deta.app/user
+### user dev
+GET http://localhost:5000/user
 ###
 GET http://iotbackend-1-g4573555.deta.app/user/yoga.pratama.pangestu@gmail.com
 ###

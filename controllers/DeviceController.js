@@ -24,13 +24,16 @@ export const getDeviceById = async ( req, res ) => {
 }
 
 export const createDevice = async ( req, res ) => {
-    const { title, description, value, authorEmail } = req.body
+    const { name, description, value, authorEmail, category, value_string, value_boolean, value_number } = req.body
     try {
         const response = await prisma.device.create({
             data: {
-                title, 
+                name, 
                 description,
-                value,
+                category,
+                value_boolean,
+                value_string,
+                value_number,
                 author: {
                     connect: {
                         email: authorEmail
@@ -46,15 +49,17 @@ export const createDevice = async ( req, res ) => {
 
 export const updateDevice = async ( req, res ) => {
     const { id } = req.params
-    const { title, description, value, authorEmail } = req.body
+    const { name, description, value_string,value_boolean, value_number } = req.body
     
     try {
         const response = await prisma.device.update({
             where: { id: id },
             data: { 
-                title: title, 
-                description: description, 
-                value: value
+                name,
+                description,
+                value_boolean,
+                value_string,
+                value_number,
             }
         })
         res.status(201).json(response)
