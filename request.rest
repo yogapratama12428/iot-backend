@@ -39,6 +39,7 @@ GET https://iotbackend-1-g4573555.deta.app/user
 GET http://localhost:5000/user
 ###
 GET http://iotbackend-1-g4573555.deta.app/user/yoga.pratama.pangestu@gmail.com
+
 ###
 POST http://localhost:5000/user/email
 Content-Type: application/json
@@ -47,7 +48,14 @@ Content-Type: application/json
     "email" : "yoga.pratama@gmail.com"
 }
 ###
-POST http://localhost:5000/user
+POST http://localhost:5000/user/email
+Content-Type: application/json
+
+{
+    "email" : "yoga.pratama@gmail.com"
+}
+###
+POST https://iotbackend-1-g4573555.deta.app/user
 Content-Type: application/json
 
 {
@@ -74,4 +82,4 @@ Content-Type: application/json
     "email" : "yoga.pratama.pangestu@gmail.com"
 }
 ###
-DELETE http://localhost:5000/user/f9c254a0-9d09-47c5-8caf-075c5abd4641
+DELETE https://iotbackend-1-g4573555.deta.app/user/0f3d2d9a-9d83-452f-84cc-caa0f26414f5

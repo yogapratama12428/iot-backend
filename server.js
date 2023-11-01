@@ -18,6 +18,6 @@ app.get('/', async (req, res) => {
     res.status(200).json({ msg: 'Success Bro!'})
 })
 
-app.listen (process.env.PORT || 5000 , ()=>{
+app.listen (process.env.PORT || 3000 , ()=>{
     console.log('listening on port '+ process.env.PORT )
 })
